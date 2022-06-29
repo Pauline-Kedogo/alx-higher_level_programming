@@ -6,5 +6,7 @@ number = random.randint(-10, 10)
      print(number, 'negative changed to zero')
  elif number == 0:
       print(number, 'is zero')
+  elif number == 1:
+      print('Single')
   else
-    print(number, 'is positive')
+    print(number, 'more')
