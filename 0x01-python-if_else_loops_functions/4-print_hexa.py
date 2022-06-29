@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-for x in range(97, 123):
-    if '{:c}'.format(x) not in 'qe':
-        print('{:c}'.format(x), end='')
-
+for i in range(0, 99):
+    print("{:d} = {}".format(i, hex(i)))
