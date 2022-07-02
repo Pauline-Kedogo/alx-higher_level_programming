@@ -1,7 +1,15 @@
 #!/usr/bin/python3
 import sys
-if __name__ == '__main__':
-    add = 0
-    for i in range(1, len(sys.argv)):
-        add += int(sys.argv[i])
-        print('{:d}'.format(add))
+
+def main():
+    i = len(sys.argv)
+    arg_sum = 0
+    counter = 1
+
+    while counter < i:
+        arg_sum += int(sys.argv[counter])
+        counter += 1
+        print("{:d}".format(arg_sum))
+
+        if __name__ == "__main__":
+            main()
