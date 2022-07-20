@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-'''Square module''
+
+"""Define a class Square."""
 
 class Square:
-    ''' Represents a square
-    Attributes:
-        __size(int): size of a square's die
-        '''
-        pass
+    """Represent a square."""
+    pass
