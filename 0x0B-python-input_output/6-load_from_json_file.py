@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-""" JSON representation module
-"""
+"""Defines a JSON file-reading function."""
 import json
 
 
 def load_from_json_file(filename):
-    """ JSON deserialization from a file
-        Args:
-            filename (str): file to obtain object's json serialization
-        Return: nothing
-    """
-    with open(filename, 'r', encoding='UTF8') as f:
+    """Create a Python object from a JSON file."""
+    with open(filename) as f:
         return json.load(f)
-
