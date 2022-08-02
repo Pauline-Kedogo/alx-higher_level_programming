@@ -1,21 +1,15 @@
 #!/usr/bin/python3
-""" JSON serialization and deserialization module
+""" JSON representation module
 """
-import sys
 import json
-dump = __import__('5-save_to_json_file').save_to_json_file
-load = __import__('6-load_from_json_file').load_from_json_file
 
 
-def main():
-    """ Main function
+def load_from_json_file(filename):
+    """ JSON deserialization from a file
+        Args:
+            filename (str): file to obtain object's json serialization
+        Return: nothing
     """
-    try:
-        my_list = load('add_item.json')
-    except Exception:
-        my_list = []
-    my_list += [sys.argv[i] for i in range(1, len(sys.argv))]
-    dump(my_list, 'add_item.json')
+    with open(filename, 'r', encoding='UTF8') as f:
+        return json.load(f)
 
-
-main()
